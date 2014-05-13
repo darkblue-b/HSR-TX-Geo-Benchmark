@@ -1,0 +1,31 @@
+# get gdal tools (http://www.gdal.org/) and convert Shapefiles to GeoJSON using ogr2ogr:
+ogr2ogr -f "GeoJSON" areawater.json TIGER-2008/48_TEXAS/areawater_merge.shp
+ogr2ogr -f "GeoJSON" edges.json TIGER-2008/48_TEXAS/edges_merge.shp
+ogr2ogr -f "GeoJSON" names.json GNIS-2009/gnis_names09.shp
+
+# import datasets
+python import_geocouch.py areawater.json
+python import_geocouch.py edges.json
+python import_geocouch.py names.json
+
+# enable the native Erlang view server (http://wiki.apache.org/couchdb/EnableErlangViews)
+## if you want to set it only for now (it will be reset after CouchDB is restarted):
+curl -X PUT -H 'X-Couch-Persist: false' -d '"{couch_native_process, start_link, []}"' http://localhost:5984/_config/native_query_servers/erlang
+## if you want to set it permanently:
+curl -X PUT -d '"{couch_native_process, start_link, []}"' http://localhost:5984/_config/native_query_servers/erlang
+
+# load subsets:
+python benchmark.py -d geocouch -l
+
+
+
+##################################################
+# compile and run geocouch under Ubuntu
+#
+./bootstrap
+# edit xulrunner paths to suit your needs:
+./configure --with-js-lib=/usr/lib/xulrunner-devel-1.9.2.6/lib --with-js-include=/usr/lib/xulrunner-devel-1.9.2.6/include
+make dev
+
+# start (edit xulrunner's library path)
+LD_LIBRARY_PATH=/usr/lib/xulrunner-1.9.2.6 ./utils/run

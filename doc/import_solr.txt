@@ -1,0 +1,10 @@
+# Convert Shape to CSV
+
+# Add Models/Solr Cores to Solr
+ 
+# Import CSV to Solr
+# see http://wiki.apache.org/solr/UpdateCSV
+
+
+# load subsets
+python benchmark.py -d solr -l 

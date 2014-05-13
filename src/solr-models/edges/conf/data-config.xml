@@ -1,0 +1,52 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource" 
+              driver="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/texas" 
+              user="postgres" 
+              password="root"/>
+  <document>
+
+	<entity name="edges" 
+            query="SELECT statefp, countyfp, tlid, tfidl, tfidr, mtfcc, fullname, smid, lfromadd, ltoadd, rfromadd, rtoadd, zipl, zipr, featcat, hydroflg, railflg, roadflg, olfflg, passflg, divroad, exttyp, ttyp, deckedroad, artpath, persist, gcseflg, offsetl, offsetr, tnidf, tnidt, ST_AsText(geom) as geom FROM edges LIMIT 100">
+			<field column="statefp" name="STATEFP"/>
+			<field column="countyfp" name="COUNTYFP"/>
+			<field column="tlid" name="TLID"/>
+			<field column="tfidl" name="TFIDL"/>
+			<field column="tfidr" name="TFIDR"/>
+			<field column="smid" name="SMID"/>
+			<field column="lfromadd" name="LFROMADD"/>
+			<field column="ltoadd" name="LTOADD"/>
+			<field column="rfromadd" name="RFROMADD"/>
+			<field column="rtoadd" name="RTOADD"/>
+			<field column="zipl" name="ZIPL"/>
+			<field column="zipr" name="ZIPR"/>
+			<field column="featcat" name="FEATCAT"/>
+			<field column="hydroflg" name="HYDROFLG"/>
+			<field column="railflg" name="RAILFLG"/>
+			<field column="roadflg" name="ROADFLG"/>
+			<field column="olfflg" name="OLFFLG"/>
+			<field column="passflg" name="PASSFLG"/>
+			<field column="divroad" name="DIVROAD"/>
+			<field column="exttyp" name="EXTTYP"/>
+			<field column="ttyp" name="TTYP"/>
+			<field column="deckedroad" name="DECKEDROAD"/>
+			<field column="artpath" name="ARTPATH"/>
+			<field column="persist" name="PERSIST"/>
+			<field column="cgseflg" name="GCSEFLG"/>
+			<field column="offsetl" name="OFFSETL"/>
+			<field column="zipr" name="ZIPR"/>
+			<field column="offsetr" name="OFFSETR"/>
+			<field column="tnidf" name="TNIDF"/>
+			<field column=",tfcc" name="MTFCC"/>
+			<field column="geom" name="geom"/>
+			<field column="fullname" name="FULLNAME"/>
+    </entity>
+  </document>
+</dataConfig>
+
+<!--
+   <field name="STATEFP" type="string" indexed="true" stored="true" required="false" multiValued="false" />   
+   <field name="COUNTYFP" type="string" indexed="true" stored="true" required="false" multiValued="false" />   
+   <field name="TLID" type="int" indexed="true" stored="true" required="false" multiValued="false" /> 
+
+ -->

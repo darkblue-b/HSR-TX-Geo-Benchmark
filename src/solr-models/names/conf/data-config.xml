@@ -1,0 +1,22 @@
+<dataConfig>
+<!--  <dataSource type="JdbcDataSource" 
+              driver="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/benchmark" 
+              user="wolski" 
+              password="root"/>
+  <document>
+
+	<entity name="names" 
+            query="SELECT gid, fid, name, class, state, county, elevation, map, ST_AsText(geom) as geom FROM names">
+			<field column="gid" name="gid"/>
+			<field column="fid" name="fid"/>
+			<field column="name" name="name"/>
+			<field column="class" name="class"/>
+			<field column="state" name="state"/>
+			<field column="county" name="county"/>
+			<field column="elevation" name="elevation"/>
+			<field column="map" name="map"/>
+			<field column="geom" name="geom"/>
+    </entity>
+  </document>-->
+</dataConfig>
