@@ -14,7 +14,9 @@ class Benchmark(benchmark.Benchmark):
           value TIMESTAMP
         );"""
     
-        print >>self.out, """DROP FUNCTION IF EXISTS benchmark_addgeoconstraints(VARCHAR(255));
+        ##-- no longer needed for PostGIS 2.0+
+        if False:
+            print >>self.out, """DROP FUNCTION IF EXISTS benchmark_addgeoconstraints(VARCHAR(255));
         CREATE OR REPLACE FUNCTION benchmark_addgeoconstraints(in_table VARCHAR(255)) RETURNS VOID AS $$
         DECLARE
           geotype TEXT;
@@ -62,10 +64,22 @@ class Benchmark(benchmark.Benchmark):
         print >>self.out, """SELECT count(*) FROM {table}
             WHERE ST_Intersects(ST_SetSRID({bbox}, 4326), geom);""".format(table=table, bbox=bbox)
 
-    def distance(self, table, point, distance):
+    def distance_geom0(self, table, point, distance):
         print >>self.out, """SELECT count(*) FROM {table}
             WHERE geom && ST_Transform(ST_Expand(ST_Transform(ST_SetSRID({point}, 4326), 32614), {distance}), 4326)
             AND ST_Distance(ST_Transform(ST_SetSRID({point}, 4326), 32614), ST_Transform(geom, 32614)) <= {distance};""".format(table=table, point=point, distance=distance)
+
+    def distance_geog(self, table, point, distance):
+        print >>self.out, """SELECT count(*) FROM {table}
+            WHERE ST_Dwithin( geog, {point}, {distance} )
+        """
+
+    def distance(self, table, point, distance):
+        print >>self.out, """
+
+          SELECT count(*) FROM {table}
+            WHERE ST_Dwithin( geom, {point}, {distance}*0.0001 )
+        """
 
     def intersectlines(self, table):
         print >>self.out, """SELECT count(*) FROM {table} e, areawater a
