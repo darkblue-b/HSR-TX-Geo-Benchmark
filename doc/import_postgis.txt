@@ -1,7 +1,15 @@
 # see: http://gis.hsr.ch/wiki/PostGIS_-_Tipps_und_Tricks#Shapefiles_in_PostGIS_importieren_.28shp2pgsql.29
 
+USER=dbb
+DB_NAME=texas
+SHP2PGSQL_BIN=/usr/lib/postgresql/9.2/bin/shp2pgsql
+DATA_DIR=/home/shared/geodata_misc/HSR_Texas_Geo_benchmark_data
+
 # create database
-createdb -O [user] -T template_postgis -U [user] texas
+# createdb -O [user] -T template_postgis -U [user] texas
+
+createdb -O $USER -U $USER $DB_NAME
+psql $DB_NAME -c 'create extension postgis'
 
 # convert shp to sql
 ## -d drop database
@@ -11,19 +19,32 @@ createdb -O [user] -T template_postgis -U [user] texas
 ## -S simple geometries if possible
 ## -W encoding
 ## [-G for geography]
-shp2pgsql -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/areawater_merge areawater > areawater.sql
-shp2pgsql -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/edges_merge edges > edges.sql
-shp2pgsql -s 4326 -d -I -D -S -W ISO-8859-1 GNIS-2009/gnis_names09 names > names.sql
 
+#$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/areawater_merge areawater > areawater.sql
+#$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/edges_merge edges > edges.sql
+#$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 GNIS-2009/gnis_names09 names > names.sql
+
+$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/areawater_merge areawater | psql -q $DB_NAME
+$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB_NAME
+$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names | psql -q $DB_NAME
+{}
 # import datasets
-psql -f areawater.sql texas
-psql -f edges.sql texas
-psql -f names.sql texas
+#psql -f areawater.sql texas
+#psql -f edges.sql texas
+#psql -f names.sql texas
+
+# make spatial indexes especially for the DWithin case
+CREATE INDEX idx_areawater32614_geom ON areawater USING gist( st_transform(geom,32614));
+CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
+CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614));
 
 # already done with -I, otherwise
 # CREATE INDEX idx_areawater_the_geom ON areawater USING gist(the_geom);
 # CREATE INDEX idx_edges_the_geom ON edges USING gist(the_geom);
 # CREATE INDEX idx_names_the_geom ON names USING gist(the_geom);
+
+
+
 
 # load subsets
 python benchmark.py -d postgis -l | psql texas 
