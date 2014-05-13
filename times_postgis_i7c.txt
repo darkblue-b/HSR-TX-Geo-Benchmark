@@ -1,0 +1,32 @@
+
+            key             |    duration     
+----------------------------+-----------------
+ nonspatial edges_500k      | 00:00:00.16909
+ nonspatial edges_1000k     | 00:00:00.285956
+ nonspatial edges_1500k     | 00:00:00.407514
+ nonspatial edges_2000k     | 00:00:00.599046
+ nonspatial edges_2500k     | 00:00:00.707499
+ intersectbb names_40k      | 00:00:00.024395
+ intersectbb names_60k      | 00:00:00.055627
+ intersectbb names_80k      | 00:00:00.070784
+ intersectbb names_100k     | 00:00:00.05644
+ intersectbb areawater_100k | 00:00:00.189027
+ intersectbb areawater_150k | 00:00:00.275597
+ intersectbb areawater_200k | 00:00:00.343348
+ intersectbb areawater_250k | 00:00:00.418389
+ intersectbb areawater_300k | 00:00:00.499781
+ intersectbb areawater_350k | 00:00:00.582802
+ intersectbb edges_500k     | 00:00:00.556139
+ intersectbb edges_1000k    | 00:00:01.103135
+ intersectbb edges_1500k    | 00:00:02.165083
+ intersectbb edges_2000k    | 00:00:02.46221
+ intersectbb edges_2500k    | 00:00:02.507118
+ intersectlines edges_500k  | 00:00:01.65454
+ intersectlines edges_1000k | 00:00:02.199046
+ intersectlines edges_1500k | 00:00:03.392776
+ intersectlines edges_2000k | 00:00:04.52436
+ intersectlines edges_2500k | 00:00:07.809017
+(25 rows)
+
+dbb@i7c:/home/shared/srcs_i7/HSR-TX-Geo-Benchmark/src$ python benchmark.py -d postgis -b | psql -q hsr_tx_test 
+
