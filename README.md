@@ -9,3 +9,13 @@ In the following sections the methodology, the queries are explained and the use
 Read more at http://giswiki.hsr.ch/HSR_Texas_Geo_Database_Benchmark
 
 Download the texas test data at https://www.dropbox.com/sh/9stif43l95t21do/ZoU2Gtdw0n
+
+
+### Update May 2014 -dbb
+
+#### Benchmark updated
++ PostgreSQL 9.2+ / PostGIS 2.0+
++ Solr 4.8.0 / Java OpenJDK 1.7
+
+
+
