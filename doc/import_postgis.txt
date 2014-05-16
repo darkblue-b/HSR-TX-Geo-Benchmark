@@ -24,19 +24,37 @@ psql $DB_NAME -c 'create extension postgis'
 #$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/edges_merge edges > edges.sql
 #$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 GNIS-2009/gnis_names09 names > names.sql
 
-$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/areawater_merge areawater | psql -q $DB_NAME
-$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB_NAME
-$SHP2PGSQL_BIN -G -d -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names | psql -q $DB_NAME
-{}
+$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/areawater_merge areawater | psql -q $DB_NAME
+$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB_NAME
+$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names | psql -q $DB_NAME
+
 # import datasets
 #psql -f areawater.sql texas
 #psql -f edges.sql texas
 #psql -f names.sql texas
 
+##-- EDGES index time - default index ---
+#dbb@i7c:/home/shared$ date;$SHP2PGSQL_BIN -d -I -s 4326 -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
+#Fri May 16 13:18:01 PDT 2014
+# ...
+#                  addgeometrycolumn                  
+#-----------------------------------------------------
+# public.edges.geom SRID:4326 TYPE:LINESTRING DIMS:2 
+#(1 row)
+#
+#Fri May 16 13:24:58 PDT 2014
+
+
 # make spatial indexes especially for the DWithin case
 CREATE INDEX idx_areawater32614_geom ON areawater USING gist( st_transform(geom,32614));
 CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
 CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614));
+
+##-- Index 32614 timing --
+#hsr_tx_test=# CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
+#CREATE INDEX
+#Time: 165699.601 ms
+#
 
 # already done with -I, otherwise
 # CREATE INDEX idx_areawater_the_geom ON areawater USING gist(the_geom);
