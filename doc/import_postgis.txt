@@ -33,7 +33,7 @@ $SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names 
 #psql -f edges.sql texas
 #psql -f names.sql texas
 
-##-- EDGES index time - default index ---
+##-- EDGES index time - default index --- 6m 57s
 #dbb@i7c:/home/shared$ date;$SHP2PGSQL_BIN -d -I -s 4326 -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
 #Fri May 16 13:18:01 PDT 2014
 # ...
@@ -50,7 +50,7 @@ CREATE INDEX idx_areawater32614_geom ON areawater USING gist( st_transform(geom,
 CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
 CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614));
 
-##-- Index 32614 timing --
+##-- Index 32614 timing -- 2m 45s
 #hsr_tx_test=# CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
 #CREATE INDEX
 #Time: 165699.601 ms
