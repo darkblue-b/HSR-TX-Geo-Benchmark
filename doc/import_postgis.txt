@@ -24,9 +24,9 @@ psql $DB_NAME -c 'create extension postgis'
 #$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 TIGER-2008/48_TEXAS/edges_merge edges > edges.sql
 #$SHP2PGSQL_BIN -s 4326 -d -I -D -S -W ISO-8859-1 GNIS-2009/gnis_names09 names > names.sql
 
-$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/areawater_merge areawater | psql -q $DB_NAME
-$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB_NAME
-$SHP2PGSQL_BIN -d -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names | psql -q $DB_NAME
+$SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/areawater_merge areawater | psql -q $DB_NAME
+$SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB_NAME
+$SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names09 names | psql -q $DB_NAME
 
 # import datasets
 #psql -f areawater.sql texas
