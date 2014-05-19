@@ -26,9 +26,9 @@ $SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/GNIS-2009/gnis_names0
 
 
 # make spatial indexes especially for the DWithin case
-CREATE INDEX idx_areawater32614_geom ON areawater USING gist( st_transform(geom,32614));
-CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
-CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614));
+psql $DB_NAME -c 'CREATE INDEX idx_areawater32614_geom ON areawater USING gist( st_transform(geom,32614))'
+psql $DB_NAME -c 'CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614))'
+psql $DB_NAME -c 'CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614))'
 
 
 # load subsets
