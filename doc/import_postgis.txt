@@ -48,13 +48,6 @@ CREATE INDEX idx_names32614_geom ON names USING gist( st_transform(geom,32614));
 #Time: 165699.601 ms
 #
 
-# already done with -I, otherwise
-# CREATE INDEX idx_areawater_the_geom ON areawater USING gist(the_geom);
-# CREATE INDEX idx_edges_the_geom ON edges USING gist(the_geom);
-# CREATE INDEX idx_names_the_geom ON names USING gist(the_geom);
-
-
-
 
 # load subsets
 python benchmark.py -d postgis -l | psql texas 
