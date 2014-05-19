@@ -1,0 +1,72 @@
+intersectbb ----> names_40k ---> found:20423 qtime:0
+intersectbb ----> names_40k ---> found:20423 qtime:0
+intersectbb ----> names_40k ---> found:20423 qtime:0
+intersectbb ----> names_60k ---> found:30194 qtime:0
+intersectbb ----> names_60k ---> found:30194 qtime:1
+intersectbb ----> names_60k ---> found:30194 qtime:1
+intersectbb ----> names_80k ---> found:39944 qtime:1
+intersectbb ----> names_80k ---> found:39944 qtime:1
+intersectbb ----> names_80k ---> found:39944 qtime:0
+intersectbb ----> names_100k ---> found:50112 qtime:0
+intersectbb ----> names_100k ---> found:50112 qtime:0
+intersectbb ----> names_100k ---> found:50112 qtime:0
+intersectbb ----> edges_500k ---> found:419303 qtime:0
+intersectbb ----> edges_500k ---> found:419303 qtime:0
+intersectbb ----> edges_500k ---> found:419303 qtime:1
+intersectbb ----> edges_1000k ---> found:490584 qtime:1
+intersectbb ----> edges_1000k ---> found:490584 qtime:1
+intersectbb ----> edges_1000k ---> found:490584 qtime:1
+intersectbb ----> edges_1500k ---> found:562097 qtime:1
+intersectbb ----> edges_1500k ---> found:562097 qtime:0
+intersectbb ----> edges_1500k ---> found:562097 qtime:0
+intersectbb ----> edges_2000k ---> found:513025 qtime:0
+intersectbb ----> edges_2000k ---> found:513025 qtime:0
+intersectbb ----> edges_2000k ---> found:513025 qtime:0
+intersectbb ----> edges_2500k ---> found:0 qtime:1
+intersectbb ----> edges_2500k ---> found:0 qtime:1
+intersectbb ----> edges_2500k ---> found:0 qtime:1
+distance ----> names_40k ---> found 21 qtime 0
+distance ----> names_40k ---> found 21 qtime 0
+distance ----> names_40k ---> found 21 qtime 1
+distance ----> names_60k ---> found 18 qtime 0
+distance ----> names_60k ---> found 18 qtime 1
+distance ----> names_60k ---> found 18 qtime 0
+distance ----> names_80k ---> found 10 qtime 0
+distance ----> names_80k ---> found 10 qtime 0
+distance ----> names_80k ---> found 10 qtime 0
+distance ----> names_100k ---> found 0 qtime 1
+distance ----> names_100k ---> found 0 qtime 1
+distance ----> names_100k ---> found 0 qtime 1
+distance ----> edges_500k ---> found 3126 qtime 0
+distance ----> edges_500k ---> found 3126 qtime 0
+distance ----> edges_500k ---> found 3126 qtime 0
+distance ----> edges_1000k ---> found 1433 qtime 0
+distance ----> edges_1000k ---> found 1433 qtime 1
+distance ----> edges_1000k ---> found 1433 qtime 1
+distance ----> edges_1500k ---> found 363 qtime 1
+distance ----> edges_1500k ---> found 363 qtime 0
+distance ----> edges_1500k ---> found 363 qtime 0
+distance ----> edges_2000k ---> found 5325 qtime 1
+distance ----> edges_2000k ---> found 5325 qtime 1
+distance ----> edges_2000k ---> found 5325 qtime 1
+distance ----> edges_2500k ---> found 0 qtime 0
+distance ----> edges_2500k ---> found 0 qtime 0
+distance ----> edges_2500k ---> found 0 qtime 0
+distance edges_1000k: 0.004
+distance edges_1500k: 0.002
+distance edges_2000k: 0.002
+distance edges_2500k: 0.002
+distance edges_500k: 0.002
+distance names_100k: 0.004
+distance names_40k: 0.002
+distance names_60k: 0.002
+distance names_80k: 0.002
+intersectbb edges_1000k: 0.002
+intersectbb edges_1500k: 0.002
+intersectbb edges_2000k: 0.004
+intersectbb edges_2500k: 0.002
+intersectbb edges_500k: 0.002
+intersectbb names_100k: 0.002
+intersectbb names_40k: 0.002
+intersectbb names_60k: 0.002
+intersectbb names_80k: 0.004
