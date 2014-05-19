@@ -77,15 +77,15 @@ distance ----> edges_2500k ---> found 0 qtime 0
 
 i7c:solr-4.8.0/example/solr$ du -sh  [en]*/data/index
 
+43G	edges/data/index
+5.0G	edges_500k/data/index
 7.2G	edges_1000k/data/index
 6.6G	edges_1500k/data/index
 6.9G	edges_2000k/data/index
-12K	edges_2500k/data/index
-5.0G	edges_500k/data/index
-43G	edges/data/index
-13M	names_100k/data/index
+
+13M	names/data/index
 4.9M	names_40k/data/index
 7.5M	names_60k/data/index
 10M	names_80k/data/index
-13M	names/data/index
+13M	names_100k/data/index
 
