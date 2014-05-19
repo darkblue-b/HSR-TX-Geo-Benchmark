@@ -1,4 +1,3 @@
-# download init_spatialite-2.3.sql from http://www.gaia-gis.it/spatialite/resources.html
 
 # start spatialite
 spatialite texas.sqlite
@@ -19,3 +18,12 @@ SELECT CreateSpatialIndex('names', 'Geometry');
 
 # load subsets
 python benchmark.py -d spatialite -l | spatialite texas.sqlite
+
+
+
+
+## Note: init_spatialite not needed for SpatiaLite version ..: 4.1.0
+# (original file line)
+# download init_spatialite-2.3.sql from http://www.gaia-gis.it/spatialite/resources.html
+
+
