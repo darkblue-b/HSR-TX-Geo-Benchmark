@@ -7,7 +7,7 @@ spatialite texas.sqlite
 .nullvalue NULL
 .headers on
 .mode column
-.read init_spatialite-2.3.sql ISO-8859-1
+#.read init_spatialite-2.3.sql ISO-8859-1
 .loadshp TIGER-2008/48_TEXAS/areawater_merge areawater ISO-8859-1 4326
 .loadshp TIGER-2008/48_TEXAS/edges_merge edges ISO-8859-1 4326
 .loadshp GNIS-2009/gnis_names09 names ISO-8859-1 4326
