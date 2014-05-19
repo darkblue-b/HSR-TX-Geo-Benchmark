@@ -52,23 +52,22 @@ distance ----> edges_2500k ---> found 0 qtime 0
 distance ----> edges_2500k ---> found 0 qtime 0
 
 
+distance edges_500k: 0.002
 distance edges_1000k: 0.004
 distance edges_1500k: 0.002
 distance edges_2000k: 0.002
 
-distance edges_500k: 0.002
-
-distance names_100k: 0.004
 distance names_40k: 0.002
 distance names_60k: 0.002
 distance names_80k: 0.002
+distance names_100k: 0.004
 
+intersectbb edges_500k: 0.002
 intersectbb edges_1000k: 0.002
 intersectbb edges_1500k: 0.002
 intersectbb edges_2000k: 0.004
 
-intersectbb edges_500k: 0.002
-intersectbb names_100k: 0.002
 intersectbb names_40k: 0.002
 intersectbb names_60k: 0.002
 intersectbb names_80k: 0.004
+intersectbb names_100k: 0.002
