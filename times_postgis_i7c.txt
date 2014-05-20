@@ -52,4 +52,60 @@ CREATE INDEX
 Time: 165699.601 ms
 
 
+##----
+
+##-- TABLE SIZES on disk ----------------------------------------
+
+ Schema |       Name        |   Type   | Owner |    Size    | Description 
+--------+-------------------+----------+-------+------------+-------------
+ public | areawater         | table    | dbb   | 224 MB     | 
+ public | areawater_100k    | table    | dbb   | 56 MB      | 
+ public | areawater_150k    | table    | dbb   | 83 MB      | 
+ public | areawater_200k    | table    | dbb   | 114 MB     | 
+ public | areawater_250k    | table    | dbb   | 145 MB     | 
+ public | areawater_300k    | table    | dbb   | 173 MB     | 
+ public | areawater_350k    | table    | dbb   | 203 MB     | 
+ public | edges             | table    | dbb   | 1954 MB    | 
+ public | names             | table    | dbb   | 13 MB      | 
+ public | names_100k        | table    | dbb   | 12 MB      | 
+ public | names_40k         | table    | dbb   | 5008 kB    | 
+ public | names_60k         | table    | dbb   | 7512 kB    | 
+ public | names_80k         | table    | dbb   | 10000 kB   | 
+
+
+##-- INDEX SIZES on disk ----------------------------------------
+                                       List of relations
+ Schema |            Name             | Type  | Owner |      Table      |  Size   | Description 
+--------+-----------------------------+-------+-------+-----------------+---------+-------------
+ public | areawater_100k_pkey         | index | dbb   | areawater_100k  | 2208 kB | 
+ public | areawater_150k_pkey         | index | dbb   | areawater_150k  | 3312 kB | 
+ public | areawater_200k_pkey         | index | dbb   | areawater_200k  | 4408 kB | 
+ public | areawater_250k_pkey         | index | dbb   | areawater_250k  | 5512 kB | 
+ public | areawater_300k_pkey         | index | dbb   | areawater_300k  | 6600 kB | 
+ public | areawater_350k_pkey         | index | dbb   | areawater_350k  | 7704 kB | 
+ public | areawater_geom_gist         | index | dbb   | areawater       | 21 MB   | 
+ public | areawater_pkey              | index | dbb   | areawater       | 8224 kB | 
+ public | edges_geom_gist             | index | dbb   | edges           | 321 MB  | 
+ public | edges_pkey                  | index | dbb   | edges           | 126 MB  | 
+ public | idx_areawater32614_geom     | index | dbb   | areawater       | 21 MB   | 
+ public | idx_areawater_100k_the_geom | index | dbb   | areawater_100k  | 5640 kB | 
+ public | idx_areawater_150k_the_geom | index | dbb   | areawater_150k  | 8800 kB | 
+ public | idx_areawater_200k_the_geom | index | dbb   | areawater_200k  | 11 MB   | 
+ public | idx_areawater_250k_the_geom | index | dbb   | areawater_250k  | 14 MB   | 
+ public | idx_areawater_300k_the_geom | index | dbb   | areawater_300k  | 17 MB   | 
+ public | idx_areawater_350k_the_geom | index | dbb   | areawater_350k  | 20 MB   | 
+ public | idx_edges32614_geom         | index | dbb   | edges           | 320 MB  | 
+ public | idx_names32614_geom         | index | dbb   | names           | 5960 kB | 
+ public | idx_names_100k_the_geom     | index | dbb   | names_100k      | 5744 kB | 
+ public | idx_names_40k_the_geom      | index | dbb   | names_40k       | 2360 kB | 
+ public | idx_names_60k_the_geom      | index | dbb   | names_60k       | 3584 kB | 
+ public | idx_names_80k_the_geom      | index | dbb   | names_80k       | 4768 kB | 
+ public | names_100k_pkey             | index | dbb   | names_100k      | 2208 kB | 
+ public | names_40k_pkey              | index | dbb   | names_40k       | 896 kB  | 
+ public | names_60k_pkey              | index | dbb   | names_60k       | 1328 kB | 
+ public | names_80k_pkey              | index | dbb   | names_80k       | 1768 kB | 
+ public | names_geom_gist             | index | dbb   | names           | 5976 kB | 
+ public | names_pkey                  | index | dbb   | names           | 2280 kB | 
+ public | spatial_ref_sys_pkey        | index | dbb   | spatial_ref_sys | 144 kB  | 
+
 
