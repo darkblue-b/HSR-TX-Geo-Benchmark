@@ -52,6 +52,19 @@ CREATE INDEX
 Time: 165699.601 ms
 
 
+##---- AREAWATER import+index time - default index --- 11m 43s
+
+dbb@i7c:~$ date;$SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
+Tue May 20 16:41:37 PDT 2014
+
+                  addgeometrycolumn                  
+-----------------------------------------------------
+ public.edges.geom SRID:4326 TYPE:LINESTRING DIMS:2 
+(1 row)
+
+Tue May 20 16:53:20 PDT 2014
+
+
 ##----
 
 ##-- TABLE SIZES on disk ----------------------------------------
@@ -93,5 +106,3 @@ Time: 165699.601 ms
  public | idx_names_60k_the_geom      | index | dbb   | names_60k       | 3584 kB | 
  public | idx_names_80k_the_geom      | index | dbb   | names_80k       | 4768 kB | 
  public | names_geom_gist             | index | dbb   | names           | 5976 kB | 
-
-
