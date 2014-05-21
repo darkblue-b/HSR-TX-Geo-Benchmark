@@ -73,7 +73,8 @@ distance ----> edges_2500k ---> found 0 qtime 0
 distance ----> edges_2500k ---> found 0 qtime 0
 
 
-##--- Index Time - 57m 33s  POLYGON ------------
+##--- Index Time - 57m 33s  POLYGON ------------------
+##- in this run, 250k, 300k, 350k did not add records
 
 dbb@i7c:/home/shared/srcs_i7/HSR-TX-Geo-Benchmark/src$ date;python benchmark_solr_only.py -l;date
 Tue May 20 17:25:23 PDT 2014
@@ -98,6 +99,15 @@ areawater_350k indexing 120000
 areawater_350k indexing 180000
 areawater_350k indexing 240000
 Tue May 20 18:22:56 PDT 2014
+
+dbb@i7c:/dum1/solr-4.8.0/example/solr$ du -sh areawater*/data/index
+210M	areawater_100k/data/index
+14M	areawater_150k/data/index
+14M	areawater_200k/data/index
+12K	areawater_250k/data/index
+12K	areawater_300k/data/index
+12K	areawater_350k/data/index
+16G	areawater/data/index
 
 
 ##--- Index Sizes on Disk ------------------------------
