@@ -33,18 +33,19 @@ class Benchmark(benchmark.Benchmark):
     def printResults(self):
         print >>self.out, "SELECT * FROM benchmark_results";
 
-    def loadData(self, sourcetable, targettable, bbox):        
-        print >>self.out, "DROP TABLE IF EXISTS {targettable};".format(targettable=targettable);
+    def loadData(self, sourcetable, targettable, bbox):
+        print >>self.out, " DROP TABLE IF EXISTS {targettable} cascade;".format(targettable=targettable);
         print >>self.out, """CREATE TABLE {targettable} AS
             SELECT * FROM {sourcetable}
             WHERE ST_Intersects(ST_SetSRID({bbox}, 4326), geom);""".format(targettable=targettable, sourcetable=sourcetable, bbox=bbox)
-    
+
         print >>self.out, "ALTER TABLE {table} ADD PRIMARY KEY (gid);".format(table=targettable)
-        
-        # checking the constraints for every single row is *really* slow    
-        print >>self.out, "SELECT benchmark_addgeoconstraints({table});".format(table=targettable);
-      
+
+        # checking the constraints for every single row is *really* slow
+        #print >>self.out, "SELECT benchmark_addgeoconstraints({table});".format(table=targettable);
+
         print >>self.out, "CREATE INDEX idx_{table}_the_geom ON {table} USING gist (geom);".format(table=targettable);
+        print >>self.out, "CREATE INDEX idx_{table}_32614_geom ON {table} USING gist( st_transform(geom,32614));".format(table=targettable);
 
     def createIndex(self, table, column):
         print >>self.out, "CREATE INDEX idx_{table}_{column} ON {table}({column});".format(table=table, column=column)
@@ -72,14 +73,19 @@ class Benchmark(benchmark.Benchmark):
     def distance_geog(self, table, point, distance):
         print >>self.out, """SELECT count(*) FROM {table}
             WHERE ST_Dwithin( geog, {point}, {distance} )
-        """
+        """.format(table=table, point=point, distance=distance)
 
     def distance(self, table, point, distance):
         print >>self.out, """
+          SELECT 
+            count(*) FROM areawater_200k
+          WHERE 
+            ST_Dwithin( 
+              st_transform(geom, 32614), 
+              st_transform(ST_SetSRID( {point}, 4326),32614), 
+              {distance} );
+        """.format(table=table, point=point, distance=distance)
 
-          SELECT count(*) FROM {table}
-            WHERE ST_Dwithin( geom, {point}, {distance}*0.0001 )
-        """
 
     def intersectlines(self, table):
         print >>self.out, """SELECT count(*) FROM {table} e, areawater a
