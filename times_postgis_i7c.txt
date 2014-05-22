@@ -1,47 +1,32 @@
 
             key             |    duration     
 ----------------------------+-----------------
- nonspatial edges_500k      | 00:00:00.140608
- nonspatial edges_1000k     | 00:00:00.267612
- nonspatial edges_1500k     | 00:00:00.398425
- nonspatial edges_2000k     | 00:00:00.540528
- nonspatial edges_2500k     | 00:00:00.712603
- intersectbb names_40k      | 00:00:00.024002
- intersectbb names_60k      | 00:00:00.036847
- intersectbb names_80k      | 00:00:00.0624
- intersectbb names_100k     | 00:00:00.054824
- intersectbb areawater_100k | 00:00:00.185559
- intersectbb areawater_150k | 00:00:00.282014
- intersectbb areawater_200k | 00:00:00.343964
- intersectbb areawater_250k | 00:00:00.418099
- intersectbb areawater_300k | 00:00:00.496576
- intersectbb areawater_350k | 00:00:00.593434
- intersectbb edges_500k     | 00:00:00.542548
- intersectbb edges_1000k    | 00:00:01.078242
- intersectbb edges_1500k    | 00:00:02.241995
- intersectbb edges_2000k    | 00:00:02.474828
- intersectbb edges_2500k    | 00:00:02.575692
- distance names_40k         | 00:00:00.00088
- distance names_60k         | 00:00:00.002768
- distance names_80k         | 00:00:00.009659
- distance names_100k        | 00:00:00.000537
- distance areawater_100k    | 00:00:00.001533
- distance areawater_150k    | 00:00:00.006198
- distance areawater_200k    | 00:00:00.013349
- distance areawater_250k    | 00:00:00.015018
- distance areawater_300k    | 00:00:00.01717
- distance areawater_350k    | 00:00:00.015905
- distance edges_500k        | 00:00:00.061934
- distance edges_1000k       | 00:00:00.048965
- distance edges_1500k       | 00:00:00.051214
- distance edges_2000k       | 00:00:00.085624
- distance edges_2500k       | 00:00:00.039191
- intersectlines edges_500k  | 00:00:01.632133
- intersectlines edges_1000k | 00:00:02.189364
- intersectlines edges_1500k | 00:00:03.37636
- intersectlines edges_2000k | 00:00:04.450071
- intersectlines edges_2500k | 00:00:07.662609
-
+ nonspatial edges_500k      | 00:00:00.16909
+ nonspatial edges_1000k     | 00:00:00.285956
+ nonspatial edges_1500k     | 00:00:00.407514
+ nonspatial edges_2000k     | 00:00:00.599046
+ nonspatial edges_2500k     | 00:00:00.707499
+ intersectbb names_40k      | 00:00:00.024395
+ intersectbb names_60k      | 00:00:00.055627
+ intersectbb names_80k      | 00:00:00.070784
+ intersectbb names_100k     | 00:00:00.05644
+ intersectbb areawater_100k | 00:00:00.189027
+ intersectbb areawater_150k | 00:00:00.275597
+ intersectbb areawater_200k | 00:00:00.343348
+ intersectbb areawater_250k | 00:00:00.418389
+ intersectbb areawater_300k | 00:00:00.499781
+ intersectbb areawater_350k | 00:00:00.582802
+ intersectbb edges_500k     | 00:00:00.556139
+ intersectbb edges_1000k    | 00:00:01.103135
+ intersectbb edges_1500k    | 00:00:02.165083
+ intersectbb edges_2000k    | 00:00:02.46221
+ intersectbb edges_2500k    | 00:00:02.507118
+ intersectlines edges_500k  | 00:00:01.65454
+ intersectlines edges_1000k | 00:00:02.199046
+ intersectlines edges_1500k | 00:00:03.392776
+ intersectlines edges_2000k | 00:00:04.52436
+ intersectlines edges_2500k | 00:00:07.809017
+(25 rows)
 
 dbb@i7c:/home/shared/srcs_i7/HSR-TX-Geo-Benchmark/src$ python benchmark.py -d postgis -b | psql -q hsr_tx_test 
 
@@ -69,55 +54,4 @@ Time: 165699.601 ms
 
 ##---- AREAWATER import+index time - default index --- 11m 43s
 
-dbb@i7c:~$ date;$SHP2PGSQL_BIN -d -s 4326 -I -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
-Tue May 20 16:41:37 PDT 2014
-
-                  addgeometrycolumn                  
------------------------------------------------------
- public.edges.geom SRID:4326 TYPE:LINESTRING DIMS:2 
-(1 row)
-
-Tue May 20 16:53:20 PDT 2014
-
-
 ##----
-
-##-- TABLE SIZES on disk ----------------------------------------
-
- Schema |       Name        |   Type   | Owner |    Size    | Description 
---------+-------------------+----------+-------+------------+-------------
- public | areawater         | table    | dbb   | 224 MB     | 
- public | areawater_100k    | table    | dbb   | 56 MB      | 
- public | areawater_150k    | table    | dbb   | 83 MB      | 
- public | areawater_200k    | table    | dbb   | 114 MB     | 
- public | areawater_250k    | table    | dbb   | 145 MB     | 
- public | areawater_300k    | table    | dbb   | 173 MB     | 
- public | areawater_350k    | table    | dbb   | 203 MB     | 
- public | edges             | table    | dbb   | 1954 MB    | 
- public | names             | table    | dbb   | 13 MB      | 
- public | names_100k        | table    | dbb   | 12 MB      | 
- public | names_40k         | table    | dbb   | 5008 kB    | 
- public | names_60k         | table    | dbb   | 7512 kB    | 
- public | names_80k         | table    | dbb   | 10000 kB   | 
-
-
-##-- INDEX SIZES on disk ----------------------------------------
-                                       List of relations
- Schema |            Name             | Type  | Owner |      Table      |  Size   | Description 
---------+-----------------------------+-------+-------+-----------------+---------+-------------
- public | areawater_geom_gist         | index | dbb   | areawater       | 21 MB   | 
- public | edges_geom_gist             | index | dbb   | edges           | 321 MB  | 
- public | idx_areawater32614_geom     | index | dbb   | areawater       | 21 MB   | 
- public | idx_areawater_100k_the_geom | index | dbb   | areawater_100k  | 5640 kB | 
- public | idx_areawater_150k_the_geom | index | dbb   | areawater_150k  | 8800 kB | 
- public | idx_areawater_200k_the_geom | index | dbb   | areawater_200k  | 11 MB   | 
- public | idx_areawater_250k_the_geom | index | dbb   | areawater_250k  | 14 MB   | 
- public | idx_areawater_300k_the_geom | index | dbb   | areawater_300k  | 17 MB   | 
- public | idx_areawater_350k_the_geom | index | dbb   | areawater_350k  | 20 MB   | 
- public | idx_edges32614_geom         | index | dbb   | edges           | 320 MB  | 
- public | idx_names32614_geom         | index | dbb   | names           | 5960 kB | 
- public | idx_names_100k_the_geom     | index | dbb   | names_100k      | 5744 kB | 
- public | idx_names_40k_the_geom      | index | dbb   | names_40k       | 2360 kB | 
- public | idx_names_60k_the_geom      | index | dbb   | names_60k       | 3584 kB | 
- public | idx_names_80k_the_geom      | index | dbb   | names_80k       | 4768 kB | 
- public | names_geom_gist             | index | dbb   | names           | 5976 kB | 

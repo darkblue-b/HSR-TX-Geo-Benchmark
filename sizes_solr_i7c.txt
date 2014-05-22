@@ -1,6 +1,6 @@
 ##--- Index Sizes on Disk ------------------------------
 
-dbb@i7c:/dum1/solr-4.8.0/example/solr$ du -sh areawater*/data/index
+dbb@i7c: solr-4.8.0/example/solr$ du -sh areawater*/data/index
 210M	areawater_100k/data/index
 14M	areawater_150k/data/index
 14M	areawater_200k/data/index
@@ -10,7 +10,7 @@ dbb@i7c:/dum1/solr-4.8.0/example/solr$ du -sh areawater*/data/index
 16G	areawater/data/index
 
 
-i7c:solr-4.8.0/example/solr$ du -sh  [en]*/data/index
+i7c: solr-4.8.0/example/solr$ du -sh  [en]*/data/index
 
 43G	edges/data/index
 5.0G	edges_500k/data/index
