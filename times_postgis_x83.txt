@@ -1,30 +1,47 @@
-            key             |    duration     
+           key             |    duration     
 ----------------------------+-----------------
- nonspatial edges_500k      | 00:00:00.041001
- nonspatial edges_1000k     | 00:00:00.064679
- nonspatial edges_1500k     | 00:00:00.097243
- nonspatial edges_2000k     | 00:00:00.136693
- nonspatial edges_2500k     | 00:00:00.183914
- intersectbb names_40k      | 00:00:00.021087
- intersectbb names_60k      | 00:00:00.030436
- intersectbb names_80k      | 00:00:00.03977
- intersectbb names_100k     | 00:00:00.050772
- intersectbb areawater_100k | 00:00:00.159667
- intersectbb areawater_150k | 00:00:00.243538
- intersectbb areawater_200k | 00:00:00.315422
- intersectbb areawater_250k | 00:00:00.383056
- intersectbb areawater_300k | 00:00:00.465158
- intersectbb areawater_350k | 00:00:00.536365
- intersectbb edges_500k     | 00:00:00.488187
- intersectbb edges_1000k    | 00:00:00.96475
- intersectbb edges_1500k    | 00:00:01.97317
- intersectbb edges_2000k    | 00:00:02.201916
- intersectbb edges_2500k    | 00:00:02.279631
- intersectlines edges_500k  | 00:00:01.461609
- intersectlines edges_1000k | 00:00:01.901307
- intersectlines edges_1500k | 00:00:02.92687
- intersectlines edges_2000k | 00:00:03.874473
- intersectlines edges_2500k | 00:00:06.662656
-(25 rows)
+ nonspatial edges_500k      | 00:00:00.174015
+ nonspatial edges_1000k     | 00:00:00.256272
+ nonspatial edges_1500k     | 00:00:00.383929
+ nonspatial edges_2000k     | 00:00:00.522865
+ nonspatial edges_2500k     | 00:00:00.690353
+ intersectbb names_40k      | 00:00:00.021059
+ intersectbb names_60k      | 00:00:00.037459
+ intersectbb names_80k      | 00:00:00.040897
+ intersectbb names_100k     | 00:00:00.051608
+ intersectbb areawater_100k | 00:00:00.164225
+ intersectbb areawater_150k | 00:00:00.244055
+ intersectbb areawater_200k | 00:00:00.328737
+ intersectbb areawater_250k | 00:00:00.396304
+ intersectbb areawater_300k | 00:00:00.478488
+ intersectbb areawater_350k | 00:00:00.554657
+ intersectbb edges_500k     | 00:00:00.493705
+ intersectbb edges_1000k    | 00:00:00.98056
+ intersectbb edges_1500k    | 00:00:01.999952
+ intersectbb edges_2000k    | 00:00:02.244764
+ intersectbb edges_2500k    | 00:00:02.335738
+ distance names_40k         | 00:00:00.001819
+ distance names_60k         | 00:00:00.001789
+ distance names_80k         | 00:00:00.001634
+ distance names_100k        | 00:00:00.001152
+ distance areawater_100k    | 00:00:00.002925
+ distance areawater_150k    | 00:00:00.010717
+ distance areawater_200k    | 00:00:00.002041
+ distance areawater_250k    | 00:00:00.008228
+ distance areawater_300k    | 00:00:00.007543
+ distance areawater_350k    | 00:00:00.007364
+ distance edges_500k        | 00:00:00.031895
+ distance edges_1000k       | 00:00:00.029282
+ distance edges_1500k       | 00:00:00.030398
+ distance edges_2000k       | 00:00:00.09071
+ distance edges_2500k       | 00:00:00.033221
+ intersectlines edges_500k  | 00:00:01.487863
+ intersectlines edges_1000k | 00:00:01.945985
+ intersectlines edges_1500k | 00:00:02.996787
+ intersectlines edges_2000k | 00:00:03.929366
+ intersectlines edges_2500k | 00:00:06.782848
+
+
+
 
 x:~/hsr-bench/HSR-Texas-Geo-Database-Benchmark-master/src$ python benchmark.py -d postgis -b | psql hsr_tx_test
