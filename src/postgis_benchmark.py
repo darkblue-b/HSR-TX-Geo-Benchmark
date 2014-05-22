@@ -78,7 +78,7 @@ class Benchmark(benchmark.Benchmark):
     def distance(self, table, point, distance):
         print >>self.out, """
           SELECT 
-            count(*) FROM areawater_200k
+            count(*) FROM {table}
           WHERE 
             ST_Dwithin( 
               st_transform(geom, 32614), 
