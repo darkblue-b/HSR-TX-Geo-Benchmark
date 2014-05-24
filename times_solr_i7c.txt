@@ -145,31 +145,11 @@ distance ----> edges_2500k ---> found 0 qtime 0
 distance ----> edges_2500k ---> found 0 qtime 0
 
 
-##--- Index Time - 57m 33s  POLYGON ------------------
-##- in this run, 250k, 300k, 350k did not add records
-
-dbb@i7c:/home/shared/srcs_i7/HSR-TX-Geo-Benchmark/src$ date;python benchmark_solr_only.py -l;date
-Tue May 20 17:25:23 PDT 2014
-areawater_100k indexing 0
-areawater_150k indexing 0
-areawater_150k indexing 60000
-areawater_200k indexing 0
-areawater_200k indexing 60000
-areawater_200k indexing 120000
-areawater_250k indexing 0
-areawater_250k indexing 60000
-areawater_250k indexing 120000
-areawater_250k indexing 180000
-areawater_300k indexing 0
-areawater_300k indexing 60000
-areawater_300k indexing 120000
-areawater_300k indexing 180000
-areawater_300k indexing 240000
-areawater_350k indexing 0
-areawater_350k indexing 60000
-areawater_350k indexing 120000
-areawater_350k indexing 180000
-areawater_350k indexing 240000
-Tue May 20 18:22:56 PDT 2014
-
+##--- Ingestion: POLYGON  3x 90,000+ rows pre-selected in csv, in parallel
+##--   01:47  01:47  01:32  00:30    ~2 hours
+areawater_300k
+  /300k_2_split_0.csv, Fri May 23 19:17:54 PDT 2014, Fri May 23 21:05:55 PDT 2014
+  /300k_2_split_1.csv, Fri May 23 19:17:18 PDT 2014, Fri May 23 21:04:52 PDT 2014 
+  /300k_2_split_2.csv, Fri May 23 19:16:43 PDT 2014, Fri May 23 20:48:51 PDT 2014
+  /300k_2_split_3.csv, Fri May 23 19:16:08 PDT 2014, Fri May 23 19:46:22 PDT 2014
 
