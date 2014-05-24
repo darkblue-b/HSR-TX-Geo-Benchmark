@@ -15,7 +15,7 @@ Download the texas test data at https://www.dropbox.com/sh/9stif43l95t21do/ZoU2G
 
 #### Benchmark updated
 + PostgreSQL 9.2+ / PostGIS 2.1+ / GEOS 3.4.2
-+ Solr 4.8.0 / Java OpenJDK 1.7
++ Solr 4.8.0 / Java OpenJDK 1.7 / spatial4j 0.4.1
 + Spatialite 4.1.0 / GEOS 3.4.2
 
 
