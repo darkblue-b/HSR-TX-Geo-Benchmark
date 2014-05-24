@@ -1,27 +1,30 @@
 ##--- Index Sizes on Disk ------------------------------
 
 dbb@i7c: solr-4.8.0/example/solr$ du -sh areawater*/data/index
-210M	areawater_100k/data/index
-14M	areawater_150k/data/index
-14M	areawater_200k/data/index
-12K	areawater_250k/data/index
-12K	areawater_300k/data/index
-12K	areawater_350k/data/index
-16G	areawater/data/index
+
+ 16G	areawater/data/index
+4.3G	areawater_100k/data/index
+ 11G	areawater_150k/data/index
+3.6G	areawater_200k/data/index
+4.3G	areawater_250k/data/index
+ 13G	areawater_300k/data/index
+ 15G	areawater_350k/data/index
 
 
 i7c: solr-4.8.0/example/solr$ du -sh  [en]*/data/index
 
-43G	edges/data/index
+ 43G	edges/data/index
 5.0G	edges_500k/data/index
 7.2G	edges_1000k/data/index
 6.6G	edges_1500k/data/index
 6.9G	edges_2000k/data/index
+ 12K	edges_2500k/data/index
 
-13M	names/data/index
+ 13M	names/data/index
 4.9M	names_40k/data/index
 7.5M	names_60k/data/index
-10M	names_80k/data/index
-13M	names_100k/data/index
+ 10M	names_80k/data/index
+ 13M	names_100k/data/index
+
 
 
