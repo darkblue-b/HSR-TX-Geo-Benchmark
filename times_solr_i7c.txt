@@ -1,144 +1,143 @@
-nonspatial edges_500k: 0.127
-nonspatial edges_1000k: 0.244
-nonspatial edges_1500k: 0.127
-nonspatial edges_2000k: 0.12
-nonspatial edges_2500k: 0.125
+nonspatial edges_1000k: 0.122
+nonspatial edges_1500k: 0.128
+nonspatial edges_2000k: 0.124
+nonspatial edges_2500k: 0.126
+nonspatial edges_500k: 0.141
 
-intersectbb areawater_100k: 0.002
-intersectbb areawater_150k: 0.002
-intersectbb areawater_200k: 0.004
-intersectbb areawater_250k: 0.002
-intersectbb areawater_300k: 0.002
-intersectbb areawater_350k: 0.001
-intersectbb edges_1000k: 0.002
-intersectbb edges_1500k: 0.002
-intersectbb edges_2000k: 0.002
-intersectbb edges_2500k: 0.002
-intersectbb edges_500k: 0.002
-intersectbb names_100k: 0.002
-intersectbb names_40k: 0.001
-intersectbb names_60k: 0.001
-intersectbb names_80k: 0.004
+distance areawater_100k: 0.129
+distance areawater_150k: 0.119
+distance areawater_200k: 0.118
+distance areawater_250k: 0.13
+distance areawater_300k: 0.126
+distance areawater_350k: 0.119
+distance edges_1000k: 0.119
+distance edges_1500k: 0.127
+distance edges_2000k: 0.118
+distance edges_2500k: 0.12
+distance edges_500k: 0.126
+distance names_100k: 0.119
+distance names_40k: 0.12
+distance names_60k: 0.124
+distance names_80k: 0.125
 
-distance areawater_100k: 0.122
-distance areawater_150k: 0.127
-distance areawater_200k: 0.123
-distance areawater_250k: 0.127
-distance areawater_300k: 0.122
-distance areawater_350k: 0.123
-distance edges_1000k: 0.128
-distance edges_1500k: 0.139
-distance edges_2000k: 0.124
-distance edges_2500k: 0.124
-distance edges_500k: 0.128
-distance names_100k: 0.122
-distance names_40k: 0.132
-distance names_60k: 0.123
-distance names_80k: 0.127
-
+intersectbb areawater_100k: 0.123
+intersectbb areawater_150k: 0.774
+intersectbb areawater_200k: 0.113
+intersectbb areawater_250k: 0.134
+intersectbb areawater_300k: 0.204
+intersectbb areawater_350k: 0.08
+intersectbb edges_1000k: 0.182
+intersectbb edges_1500k: 0.089
+intersectbb edges_2000k: 0.09
+intersectbb edges_2500k: 0.001
+intersectbb edges_500k: 0.164
+intersectbb names_100k: 0.009
+intersectbb names_40k: 0.013
+intersectbb names_60k: 0.007
+intersectbb names_80k: 0.009
 
 #--------------------------------------------------------
-nonspatial -> edges_500k ---> found: 472324 qtime: 19
-nonspatial -> edges_500k ---> found: 472324 qtime: 1
 nonspatial -> edges_500k ---> found: 472324 qtime: 2
-nonspatial -> edges_1000k ---> found: 530212 qtime: 6
+nonspatial -> edges_500k ---> found: 472324 qtime: 0
+nonspatial -> edges_500k ---> found: 472324 qtime: 0
 nonspatial -> edges_1000k ---> found: 530212 qtime: 0
+nonspatial -> edges_1000k ---> found: 530212 qtime: 1
 nonspatial -> edges_1000k ---> found: 530212 qtime: 0
-nonspatial -> edges_1500k ---> found: 500938 qtime: 7
+nonspatial -> edges_1500k ---> found: 500938 qtime: 1
 nonspatial -> edges_1500k ---> found: 500938 qtime: 0
 nonspatial -> edges_1500k ---> found: 500938 qtime: 1
-nonspatial -> edges_2000k ---> found: 563808 qtime: 8
-nonspatial -> edges_2000k ---> found: 563808 qtime: 0
+nonspatial -> edges_2000k ---> found: 563808 qtime: 2
 nonspatial -> edges_2000k ---> found: 563808 qtime: 1
-nonspatial -> edges_2500k ---> found: 0 qtime: 6
+nonspatial -> edges_2000k ---> found: 563808 qtime: 0
 nonspatial -> edges_2500k ---> found: 0 qtime: 0
 nonspatial -> edges_2500k ---> found: 0 qtime: 0
-intersectbb ----> names_40k ---> found:20423 qtime:7
-intersectbb ----> names_40k ---> found:20423 qtime:1
-intersectbb ----> names_40k ---> found:20423 qtime:1
-intersectbb ----> names_60k ---> found:30194 qtime:8
-intersectbb ----> names_60k ---> found:30194 qtime:0
-intersectbb ----> names_60k ---> found:30194 qtime:0
-intersectbb ----> names_80k ---> found:39944 qtime:8
-intersectbb ----> names_80k ---> found:39944 qtime:1
-intersectbb ----> names_80k ---> found:39944 qtime:0
-intersectbb ----> names_100k ---> found:50112 qtime:3
-intersectbb ----> names_100k ---> found:50112 qtime:0
-intersectbb ----> names_100k ---> found:50112 qtime:1
-intersectbb ----> areawater_100k ---> found:1991 qtime:4
-intersectbb ----> areawater_100k ---> found:1991 qtime:0
-intersectbb ----> areawater_100k ---> found:1991 qtime:0
-intersectbb ----> areawater_150k ---> found:225 qtime:3
-intersectbb ----> areawater_150k ---> found:225 qtime:0
-intersectbb ----> areawater_150k ---> found:225 qtime:0
-intersectbb ----> areawater_200k ---> found:305 qtime:3
-intersectbb ----> areawater_200k ---> found:305 qtime:0
-intersectbb ----> areawater_200k ---> found:305 qtime:0
-intersectbb ----> areawater_250k ---> found:0 qtime:3
-intersectbb ----> areawater_250k ---> found:0 qtime:0
-intersectbb ----> areawater_250k ---> found:0 qtime:0
-intersectbb ----> areawater_300k ---> found:0 qtime:4
-intersectbb ----> areawater_300k ---> found:0 qtime:0
-intersectbb ----> areawater_300k ---> found:0 qtime:0
-intersectbb ----> areawater_350k ---> found:0 qtime:5
-intersectbb ----> areawater_350k ---> found:0 qtime:1
-intersectbb ----> areawater_350k ---> found:0 qtime:0
-intersectbb ----> edges_500k ---> found:419303 qtime:0
-intersectbb ----> edges_500k ---> found:419303 qtime:0
-intersectbb ----> edges_500k ---> found:419303 qtime:0
-intersectbb ----> edges_1000k ---> found:490584 qtime:0
-intersectbb ----> edges_1000k ---> found:490584 qtime:0
-intersectbb ----> edges_1000k ---> found:490584 qtime:0
-intersectbb ----> edges_1500k ---> found:562097 qtime:0
-intersectbb ----> edges_1500k ---> found:562097 qtime:0
-intersectbb ----> edges_1500k ---> found:562097 qtime:0
-intersectbb ----> edges_2000k ---> found:513025 qtime:1
-intersectbb ----> edges_2000k ---> found:513025 qtime:1
-intersectbb ----> edges_2000k ---> found:513025 qtime:1
-intersectbb ----> edges_2500k ---> found:0 qtime:1
-intersectbb ----> edges_2500k ---> found:0 qtime:1
-intersectbb ----> edges_2500k ---> found:0 qtime:1
-distance ----> names_40k ---> found 21 qtime 1
+nonspatial -> edges_2500k ---> found: 0 qtime: 0
+intersectbb ----> names_40k ---> found:20256 qtime:9
+intersectbb ----> names_40k ---> found:20256 qtime:10
+intersectbb ----> names_40k ---> found:20256 qtime:11
+intersectbb ----> names_60k ---> found:30054 qtime:5
+intersectbb ----> names_60k ---> found:30054 qtime:7
+intersectbb ----> names_60k ---> found:30054 qtime:5
+intersectbb ----> names_80k ---> found:39857 qtime:6
+intersectbb ----> names_80k ---> found:39857 qtime:7
+intersectbb ----> names_80k ---> found:39857 qtime:8
+intersectbb ----> names_100k ---> found:50068 qtime:7
+intersectbb ----> names_100k ---> found:50068 qtime:9
+intersectbb ----> names_100k ---> found:50068 qtime:7
+intersectbb ----> areawater_100k ---> found:50450 qtime:124
+intersectbb ----> areawater_100k ---> found:50450 qtime:610
+intersectbb ----> areawater_100k ---> found:50450 qtime:121
+intersectbb ----> areawater_150k ---> found:75979 qtime:710
+intersectbb ----> areawater_150k ---> found:75979 qtime:287
+intersectbb ----> areawater_150k ---> found:75979 qtime:772
+intersectbb ----> areawater_200k ---> found:43700 qtime:113
+intersectbb ----> areawater_200k ---> found:43700 qtime:112
+intersectbb ----> areawater_200k ---> found:43700 qtime:112
+intersectbb ----> areawater_250k ---> found:55586 qtime:611
+intersectbb ----> areawater_250k ---> found:55586 qtime:133
+intersectbb ----> areawater_250k ---> found:55586 qtime:133
+intersectbb ----> areawater_300k ---> found:153793 qtime:199
+intersectbb ----> areawater_300k ---> found:153793 qtime:361
+intersectbb ----> areawater_300k ---> found:153793 qtime:202
+intersectbb ----> areawater_350k ---> found:177909 qtime:79
+intersectbb ----> areawater_350k ---> found:177909 qtime:170
+intersectbb ----> areawater_350k ---> found:177909 qtime:78
+intersectbb ----> edges_500k ---> found:413013 qtime:159
+intersectbb ----> edges_500k ---> found:413013 qtime:252
+intersectbb ----> edges_500k ---> found:413013 qtime:160
+intersectbb ----> edges_1000k ---> found:477532 qtime:179
+intersectbb ----> edges_1000k ---> found:477532 qtime:275
+intersectbb ----> edges_1000k ---> found:477532 qtime:181
+intersectbb ----> edges_1500k ---> found:551755 qtime:88
+intersectbb ----> edges_1500k ---> found:551755 qtime:89
+intersectbb ----> edges_1500k ---> found:551755 qtime:88
+intersectbb ----> edges_2000k ---> found:508434 qtime:345
+intersectbb ----> edges_2000k ---> found:508434 qtime:89
+intersectbb ----> edges_2000k ---> found:508434 qtime:88
+intersectbb ----> edges_2500k ---> found:0 qtime:0
+intersectbb ----> edges_2500k ---> found:0 qtime:0
+intersectbb ----> edges_2500k ---> found:0 qtime:0
+distance ----> names_40k ---> found 21 qtime 0
 distance ----> names_40k ---> found 21 qtime 1
 distance ----> names_40k ---> found 21 qtime 1
 distance ----> names_60k ---> found 18 qtime 1
 distance ----> names_60k ---> found 18 qtime 0
-distance ----> names_60k ---> found 18 qtime 1
+distance ----> names_60k ---> found 18 qtime 0
 distance ----> names_80k ---> found 10 qtime 0
 distance ----> names_80k ---> found 10 qtime 1
 distance ----> names_80k ---> found 10 qtime 0
 distance ----> names_100k ---> found 0 qtime 0
-distance ----> names_100k ---> found 0 qtime 1
-distance ----> names_100k ---> found 0 qtime 1
-distance ----> areawater_100k ---> found 0 qtime 0
-distance ----> areawater_100k ---> found 0 qtime 0
-distance ----> areawater_100k ---> found 0 qtime 0
-distance ----> areawater_150k ---> found 0 qtime 0
-distance ----> areawater_150k ---> found 0 qtime 0
-distance ----> areawater_150k ---> found 0 qtime 0
-distance ----> areawater_200k ---> found 0 qtime 1
-distance ----> areawater_200k ---> found 0 qtime 0
-distance ----> areawater_200k ---> found 0 qtime 0
-distance ----> areawater_250k ---> found 0 qtime 0
-distance ----> areawater_250k ---> found 0 qtime 0
-distance ----> areawater_250k ---> found 0 qtime 0
-distance ----> areawater_300k ---> found 0 qtime 0
-distance ----> areawater_300k ---> found 0 qtime 0
-distance ----> areawater_300k ---> found 0 qtime 1
-distance ----> areawater_350k ---> found 0 qtime 0
-distance ----> areawater_350k ---> found 0 qtime 1
-distance ----> areawater_350k ---> found 0 qtime 1
+distance ----> names_100k ---> found 0 qtime 0
+distance ----> names_100k ---> found 0 qtime 0
+distance ----> areawater_100k ---> found 34 qtime 0
+distance ----> areawater_100k ---> found 34 qtime 0
+distance ----> areawater_100k ---> found 34 qtime 1
+distance ----> areawater_150k ---> found 523 qtime 0
+distance ----> areawater_150k ---> found 523 qtime 1
+distance ----> areawater_150k ---> found 523 qtime 0
+distance ----> areawater_200k ---> found 21 qtime 0
+distance ----> areawater_200k ---> found 21 qtime 0
+distance ----> areawater_200k ---> found 21 qtime 0
+distance ----> areawater_250k ---> found 51 qtime 0
+distance ----> areawater_250k ---> found 51 qtime 1
+distance ----> areawater_250k ---> found 51 qtime 1
+distance ----> areawater_300k ---> found 191 qtime 0
+distance ----> areawater_300k ---> found 191 qtime 1
+distance ----> areawater_300k ---> found 191 qtime 1
+distance ----> areawater_350k ---> found 151 qtime 0
+distance ----> areawater_350k ---> found 151 qtime 1
+distance ----> areawater_350k ---> found 151 qtime 1
 distance ----> edges_500k ---> found 3126 qtime 0
-distance ----> edges_500k ---> found 3126 qtime 1
 distance ----> edges_500k ---> found 3126 qtime 0
-distance ----> edges_1000k ---> found 1433 qtime 1
+distance ----> edges_500k ---> found 3126 qtime 0
 distance ----> edges_1000k ---> found 1433 qtime 0
 distance ----> edges_1000k ---> found 1433 qtime 1
+distance ----> edges_1000k ---> found 1433 qtime 0
+distance ----> edges_1500k ---> found 363 qtime 0
 distance ----> edges_1500k ---> found 363 qtime 0
 distance ----> edges_1500k ---> found 363 qtime 1
-distance ----> edges_1500k ---> found 363 qtime 0
-distance ----> edges_2000k ---> found 5325 qtime 1
-distance ----> edges_2000k ---> found 5325 qtime 1
+distance ----> edges_2000k ---> found 5325 qtime 0
+distance ----> edges_2000k ---> found 5325 qtime 0
 distance ----> edges_2000k ---> found 5325 qtime 0
 distance ----> edges_2500k ---> found 0 qtime 0
 distance ----> edges_2500k ---> found 0 qtime 0
