@@ -1,40 +1,40 @@
-nonspatial edges_1000k: 0.123
-nonspatial edges_1500k: 0.128
+nonspatial edges_500k: 0.127
+nonspatial edges_1000k: 0.244
+nonspatial edges_1500k: 0.127
 nonspatial edges_2000k: 0.12
-nonspatial edges_2500k: 0.124
-nonspatial edges_500k: 0.124
-
-distance areawater_100k: 0.12
-distance areawater_150k: 0.124
-distance areawater_200k: 0.125
-#distance areawater_250k: 0.131
-#distance areawater_300k: 0.123
-#distance areawater_350k: 0.127
-distance edges_1000k: 0.129
-distance edges_1500k: 0.118
-distance edges_2000k: 0.125
-distance edges_2500k: 0.121
-distance edges_500k: 0.122
-distance names_100k: 0.147
-distance names_40k: 0.125
-distance names_60k: 0.133
-distance names_80k: 0.124
+nonspatial edges_2500k: 0.125
 
 intersectbb areawater_100k: 0.002
 intersectbb areawater_150k: 0.002
-intersectbb areawater_200k: 0.002
-#intersectbb areawater_250k: 0.001
-#intersectbb areawater_300k: 0.004
-#intersectbb areawater_350k: 0.001
-intersectbb edges_1000k: 0.004
-intersectbb edges_1500k: 0.003
+intersectbb areawater_200k: 0.004
+intersectbb areawater_250k: 0.002
+intersectbb areawater_300k: 0.002
+intersectbb areawater_350k: 0.001
+intersectbb edges_1000k: 0.002
+intersectbb edges_1500k: 0.002
 intersectbb edges_2000k: 0.002
 intersectbb edges_2500k: 0.002
 intersectbb edges_500k: 0.002
 intersectbb names_100k: 0.002
-intersectbb names_40k: 0.002
-intersectbb names_60k: 0.002
+intersectbb names_40k: 0.001
+intersectbb names_60k: 0.001
 intersectbb names_80k: 0.004
+
+distance areawater_100k: 0.122
+distance areawater_150k: 0.127
+distance areawater_200k: 0.123
+distance areawater_250k: 0.127
+distance areawater_300k: 0.122
+distance areawater_350k: 0.123
+distance edges_1000k: 0.128
+distance edges_1500k: 0.139
+distance edges_2000k: 0.124
+distance edges_2500k: 0.124
+distance edges_500k: 0.128
+distance names_100k: 0.122
+distance names_40k: 0.132
+distance names_60k: 0.123
+distance names_80k: 0.127
 
 
 #--------------------------------------------------------
