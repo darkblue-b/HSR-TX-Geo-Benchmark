@@ -1,24 +1,20 @@
-nonspatial edges_1000k: 0.122
-nonspatial edges_1500k: 0.128
-nonspatial edges_2000k: 0.124
-nonspatial edges_2500k: 0.126
-nonspatial edges_500k: 0.141
-
 distance areawater_100k: 0.129
 distance areawater_150k: 0.119
 distance areawater_200k: 0.118
 distance areawater_250k: 0.13
 distance areawater_300k: 0.126
 distance areawater_350k: 0.119
+
+distance edges_500k: 0.126
 distance edges_1000k: 0.119
 distance edges_1500k: 0.127
 distance edges_2000k: 0.118
 distance edges_2500k: 0.12
-distance edges_500k: 0.126
-distance names_100k: 0.119
+
 distance names_40k: 0.12
 distance names_60k: 0.124
 distance names_80k: 0.125
+distance names_100k: 0.119
 
 intersectbb areawater_100k: 0.123
 intersectbb areawater_150k: 0.774
@@ -26,17 +22,27 @@ intersectbb areawater_200k: 0.113
 intersectbb areawater_250k: 0.134
 intersectbb areawater_300k: 0.204
 intersectbb areawater_350k: 0.08
+
+intersectbb edges_500k: 0.164
 intersectbb edges_1000k: 0.182
 intersectbb edges_1500k: 0.089
 intersectbb edges_2000k: 0.09
 intersectbb edges_2500k: 0.001
-intersectbb edges_500k: 0.164
-intersectbb names_100k: 0.009
+
 intersectbb names_40k: 0.013
 intersectbb names_60k: 0.007
 intersectbb names_80k: 0.009
+intersectbb names_100k: 0.009
+
+nonspatial edges_500k: 0.141
+nonspatial edges_1000k: 0.122
+nonspatial edges_1500k: 0.128
+nonspatial edges_2000k: 0.124
+nonspatial edges_2500k: 0.126
+
 
 #--------------------------------------------------------
+
 nonspatial -> edges_500k ---> found: 472324 qtime: 2
 nonspatial -> edges_500k ---> found: 472324 qtime: 0
 nonspatial -> edges_500k ---> found: 472324 qtime: 0
