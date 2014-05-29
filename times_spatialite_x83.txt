@@ -1,43 +1,49 @@
-nonspatial edges_500k|0.536026060581207
-nonspatial edges_1000k|0.694987177848816
-nonspatial edges_1500k|0.670002400875092
-nonspatial edges_2000k|0.654995441436768
-nonspatial edges_2500k|0.679014623165131
 
-intersectbb names_40k|0.693981349468231
-intersectbb names_60k|0.753003358840942
-intersectbb names_80k|0.786034762859344
-intersectbb names_100k|0.844976305961609
-intersectbb areawater_100k|1.0130301117897
-intersectbb areawater_150k|1.29401832818985
-intersectbb areawater_200k|1.53497457504272
-intersectbb areawater_250k|1.76997631788254
-intersectbb areawater_300k|2.09501981735229
-intersectbb areawater_350k|2.23800837993622
-intersectbb edges_500k|2.32100933790207
-intersectbb edges_1000k|4.16400879621506
-intersectbb edges_1500k|8.18800628185272
-intersectbb edges_2000k|8.98100137710571
-intersectbb edges_2500k|9.26400125026703
-
-distance names_40k|0.536026060581207
-distance names_60k|0.603014230728149
-distance names_80k|0.620998442173004
-distance names_100k|0.543992221355438
 distance areawater_100k|0.510960817337036
 distance areawater_150k|0.694021582603455
 distance areawater_200k|0.544998049736023
 distance areawater_250k|0.595973432064056
 distance areawater_300k|0.670002400875092
 distance areawater_350k|0.544032454490662
+
 distance edges_500k|0.878007709980011
 distance edges_1000k|0.71997195482254
 distance edges_1500k|1.11300945281982
 distance edges_2000k|1.21202319860458
 distance edges_2500k|0.885973870754242
 
+distance names_40k|0.536026060581207
+distance names_60k|0.603014230728149
+distance names_80k|0.620998442173004
+distance names_100k|0.543992221355438
+
+intersectbb areawater_100k|1.0130301117897
+intersectbb areawater_150k|1.29401832818985
+intersectbb areawater_200k|1.53497457504272
+intersectbb areawater_250k|1.76997631788254
+intersectbb areawater_300k|2.09501981735229
+intersectbb areawater_350k|2.23800837993622
+
+intersectbb edges_500k|2.32100933790207
+intersectbb edges_1000k|4.16400879621506
+intersectbb edges_1500k|8.18800628185272
+intersectbb edges_2000k|8.98100137710571
+intersectbb edges_2500k|9.26400125026703
+
+intersectbb names_100k|0.844976305961609
+intersectbb names_40k|0.693981349468231
+intersectbb names_60k|0.753003358840942
+intersectbb names_80k|0.786034762859344
+
 intersectlines edges_500k|2.71199494600296
 intersectlines edges_1000k|3.34401726722717
 intersectlines edges_1500k|4.70401793718338
 intersectlines edges_2000k|5.88602721691132
 intersectlines edges_2500k|9.77097898721695
+
+nonspatial edges_500k|0.536026060581207
+nonspatial edges_1000k|0.694987177848816
+nonspatial edges_1500k|0.670002400875092
+nonspatial edges_2000k|0.654995441436768
+nonspatial edges_2500k|0.679014623165131
+
