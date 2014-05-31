@@ -16,6 +16,8 @@ SELECT CreateSpatialIndex('areawater', 'Geometry');
 SELECT CreateSpatialIndex('edges', 'Geometry');
 SELECT CreateSpatialIndex('names', 'Geometry');
 
+.exit
+
 # load subsets
 python benchmark.py -d spatialite -l | spatialite texas.sqlite
 
