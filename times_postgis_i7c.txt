@@ -31,10 +31,10 @@
  intersectbb edges_2000k    | 00:00:02.491771
  intersectbb edges_2500k    | 00:00:02.52514
 
- intersectbb names_100k     | 00:00:00.055671
  intersectbb names_40k      | 00:00:00.039177
  intersectbb names_60k      | 00:00:00.048011
  intersectbb names_80k      | 00:00:00.066193
+ intersectbb names_100k     | 00:00:00.055671
 
  intersectlines edges_500k  | 00:00:01.634245
  intersectlines edges_1000k | 00:00:02.219804
