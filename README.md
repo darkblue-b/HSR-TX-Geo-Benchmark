@@ -11,6 +11,13 @@ Read more at http://giswiki.hsr.ch/HSR_Texas_Geo_Database_Benchmark
 Download the texas test data at https://www.dropbox.com/sh/9stif43l95t21do/ZoU2Gtdw0n
 
 
+### Update Jul 2015 -dbb
+
+#### Benchmark updated
++ PostgreSQL 9.4 / PostGIS 2.2b / GEOS 3.5b
++ Solr 5.2.0 / Java OpenJDK 1.7 / lucene-spatial-5.2.1 / spatial4j 0.4.1
+
+
 ### Update May 2014 -dbb
 
 #### Benchmark updated

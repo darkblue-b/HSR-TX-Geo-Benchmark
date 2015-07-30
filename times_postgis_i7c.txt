@@ -1,57 +1,64 @@
             key             |    duration     
 ----------------------------+-----------------
- distance areawater_100k    | 00:00:00.003181
- distance areawater_150k    | 00:00:00.014282
- distance areawater_200k    | 00:00:00.006657
- distance areawater_250k    | 00:00:00.011068
- distance areawater_300k    | 00:00:00.035317
- distance areawater_350k    | 00:00:00.017645
+ distance areawater_100k    | 00:00:00.001826
+ distance areawater_150k    | 00:00:00.00639
+ distance areawater_200k    | 00:00:00.002003
+ distance areawater_250k    | 00:00:00.004902
+ distance areawater_300k    | 00:00:00.004416
+ distance areawater_350k    | 00:00:00.004224
 
- distance edges_500k        | 00:00:00.033061
- distance edges_1000k       | 00:00:00.026892
- distance edges_1500k       | 00:00:00.037303
- distance edges_2000k       | 00:00:00.087918
- distance edges_2500k       | 00:00:00.040971
+ distance edges_500k        | 00:00:00.030557
+ distance edges_1000k       | 00:00:00.022391
+ distance edges_1500k       | 00:00:00.028703
+ distance edges_2000k       | 00:00:00.080763
+ distance edges_2500k       | 00:00:00.031271
 
- distance names_40k         | 00:00:00.002918
- distance names_60k         | 00:00:00.007118
- distance names_80k         | 00:00:00.001859
- distance names_100k        | 00:00:00.002821
+ distance names_40k         | 00:00:00.001224
+ distance names_60k         | 00:00:00.000965
+ distance names_80k         | 00:00:00.001193
+ distance names_100k        | 00:00:00.000796
 
- intersectbb areawater_100k | 00:00:00.183355
- intersectbb areawater_150k | 00:00:00.262041
- intersectbb areawater_200k | 00:00:00.398366
- intersectbb areawater_250k | 00:00:00.434748
- intersectbb areawater_300k | 00:00:00.514814
- intersectbb areawater_350k | 00:00:00.601334
+ intersectbb areawater_100k | 00:00:00.151191
+ intersectbb areawater_150k | 00:00:00.220332
+ intersectbb areawater_200k | 00:00:00.293713
+ intersectbb areawater_250k | 00:00:00.358267
+ intersectbb areawater_300k | 00:00:00.433305
+ intersectbb areawater_350k | 00:00:00.500198
 
- intersectbb edges_500k     | 00:00:00.56485
- intersectbb edges_1000k    | 00:00:01.093988
- intersectbb edges_1500k    | 00:00:02.170867
- intersectbb edges_2000k    | 00:00:02.491771
- intersectbb edges_2500k    | 00:00:02.52514
+ intersectbb edges_500k     | 00:00:00.470629
+ intersectbb edges_1000k    | 00:00:00.933966
+ intersectbb edges_1500k    | 00:00:01.917896
+ intersectbb edges_2000k    | 00:00:02.161116
+ intersectbb edges_2500k    | 00:00:02.242244
 
- intersectbb names_40k      | 00:00:00.039177
- intersectbb names_60k      | 00:00:00.048011
- intersectbb names_80k      | 00:00:00.066193
- intersectbb names_100k     | 00:00:00.055671
+ intersectbb names_40k      | 00:00:00.019912
+ intersectbb names_60k      | 00:00:00.029122
+ intersectbb names_80k      | 00:00:00.038544
+ intersectbb names_100k     | 00:00:00.048309
 
- intersectlines edges_500k  | 00:00:01.634245
- intersectlines edges_1000k | 00:00:02.219804
- intersectlines edges_1500k | 00:00:03.385622
- intersectlines edges_2000k | 00:00:04.458156
- intersectlines edges_2500k | 00:00:07.639364
+ intersectlines edges_500k  | 00:00:01.598359
+ intersectlines edges_1000k | 00:00:02.44708
+ intersectlines edges_1500k | 00:00:03.768432
+ intersectlines edges_2000k | 00:00:04.949514
+ intersectlines edges_2500k | 00:00:08.121272
 
- nonspatial edges_500k      | 00:00:00.061853
- nonspatial edges_1000k     | 00:00:00.0837
- nonspatial edges_1500k     | 00:00:00.108551
- nonspatial edges_2000k     | 00:00:00.154879
- nonspatial edges_2500k     | 00:00:00.194419
+ nonspatial edges_500k      | 00:00:00.160913
+ nonspatial edges_1000k     | 00:00:00.273066
+ nonspatial edges_1500k     | 00:00:00.407104
+ nonspatial edges_2000k     | 00:00:00.548668
+ nonspatial edges_2500k     | 00:00:00.695948
 
-dbb@i7c:/home/shared/srcs_i7/HSR-TX-Geo-Benchmark/src$ python benchmark.py -d postgis -b | psql -q hsr_tx_test 
+dbb@i7d:/black3/solr_demo_15/HSR-TX-Geo-Benchmark_v2015/src$ python benchmark.py -d postgis -b | psql -q hsr_v2015 
+
+##---  setup
+ time  python  benchmark.py -d postgis -l | psql hsr_v2015
+
+real	8m33.750s
+user	0m0.043s
+sys	0m0.035s
 
 ##----
-
+## xxx not yet
 ##-- EDGES import+index time - default index --- 6m 57s
 dbb@i7c:/home/shared$ date;$SHP2PGSQL_BIN -d -I -s 4326 -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
 
@@ -75,3 +82,5 @@ Time: 165699.601 ms
 ##---- AREAWATER import+index time - default index --- 11m 43s
 
 ##----
+
+
