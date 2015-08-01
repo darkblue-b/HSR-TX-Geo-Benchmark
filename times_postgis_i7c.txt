@@ -57,27 +57,27 @@ real	8m33.750s
 user	0m0.043s
 sys	0m0.035s
 
-##----
-## xxx not yet
-##-- EDGES import+index time - default index --- 6m 57s
-dbb@i7c:/home/shared$ date;$SHP2PGSQL_BIN -d -I -s 4326 -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q hsr_tx_test;date
 
-Fri May 16 13:18:01 PDT 2014
- ...
-                  addgeometrycolumn                  
------------------------------------------------------
- public.edges.geom SRID:4326 TYPE:LINESTRING DIMS:2 
-(1 row)
+##-- EDGES import+index time - default index --- 6m 3s
 
-Fri May 16 13:24:58 PDT 2014
+SHP2PGSQL_BIN=/home/shared/srcs_blu/postgis_22_git/loader/shp2pgsql
+DATA_DIR=/ht_1tb/geodata_misc/HSR_Texas_Geo_benchmark_data
+DB=hsr_v2015
+
+date;$SHP2PGSQL_BIN -d -I -s 4326 -D -S -W ISO-8859-1 $DATA_DIR/TIGER-2008/48_TEXAS/edges_merge edges | psql -q $DB;date
+
+Fri Jul 31 21:35:51 PDT 2015 -- Fri Jul 31 21:41:54 PDT 2015
 
 
-##-- Functional Index on Transformed 32614 Geometry  -- 2m 45s
+##-- Functional Index on Transformed 32614 Geometry  -- 4m 10s
 
 hsr_tx_test=# CREATE INDEX idx_edges32614_geom ON edges USING gist( st_transform(geom,32614));
 CREATE INDEX
-Time: 165699.601 ms
+Time: 250652.620 ms
 
+
+##----
+## xxx not yet
 
 ##---- AREAWATER import+index time - default index --- 11m 43s
 
