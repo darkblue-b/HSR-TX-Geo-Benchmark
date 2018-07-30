@@ -18,7 +18,6 @@ curl -X PUT -d '"{couch_native_process, start_link, []}"' http://localhost:5984/
 python benchmark.py -d geocouch -l
 
 
-
 ##################################################
 # compile and run geocouch under Ubuntu
 #
